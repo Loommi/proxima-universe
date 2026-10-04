@@ -1,0 +1,1 @@
+export function PageHeader({index,kicker,title,description}:{index:string;kicker:string;title:string;description:string}){return <header className="inner-hero page-grid"><div className="section-index mono">{index}</div><div><p className="eyebrow">{kicker}</p><h1>{title}</h1><p className="lede">{description}</p></div></header>}

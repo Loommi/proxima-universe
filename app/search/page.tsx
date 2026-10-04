@@ -1,0 +1,2 @@
+import {SiteShell}from"@/components/site-shell";import{SearchInterface}from"@/components/search-interface";import{publicRecords}from"@/lib/canon";
+export const metadata={title:"Search"};export default function Search(){return <SiteShell><main className="search-page page-grid"><div className="section-index mono">SEARCH / 001</div><div><p className="eyebrow">Archive retrieval</p><h1>Search the known universe.</h1><SearchInterface records={publicRecords}/></div></main></SiteShell>}

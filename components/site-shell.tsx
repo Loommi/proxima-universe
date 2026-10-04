@@ -1,0 +1,5 @@
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+const links=[["Explore","/universe"],["Timeline","/timeline"],["Archive","/archive"],["Books","/books"],["About","/about"]];
+export function SiteShell({children}:{children:React.ReactNode}){const[open,setOpen]=useState(false);return <div className="site-shell"><header className="site-header"><Link href="/" className="brand" aria-label="Proxima home"><span className="brand-mark"/>PROXIMA</Link><nav className={open?"nav open":"nav"} aria-label="Primary navigation">{links.map(([l,h])=><Link key={h} href={h} onClick={()=>setOpen(false)}>{l}</Link>)}</nav><Link href="/search" className="search-link" aria-label="Search public canon"><span>⌕</span><span>Search</span></Link><button className="menu-button" aria-expanded={open} aria-label="Toggle navigation" onClick={()=>setOpen(!open)}><span/><span/></button></header>{children}<footer className="site-footer page-grid"><div className="brand"><span className="brand-mark"/>PROXIMA</div><p>Official public canon<br/>No plot knowledge</p><p className="mono">REFERENCE FRAME<br/>PUBLIC ARCHIVE / V1</p></footer></div>}
